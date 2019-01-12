@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditRecordController">
+   <center>
+      <JFXTabPane id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Osnovni podaci">
+               <content>
+                  <StackPane>
+                     <children>
+                        <FlowPane alignment="CENTER" prefHeight="418.0" prefWidth="1097.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="318.0" prefWidth="262.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Prezime">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="lastNameTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="40.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Ime">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="firstNameTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="63.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="JMBG *">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="jmbgTextField" prefHeight="25.0" prefWidth="163.0" promptText="xxxxxxxxxxxxx">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="46.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Dat. rođ.">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXDatePicker fx:id="dateOfBirthDatePicker" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="37.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXDatePicker>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Dat. smrti">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXDatePicker fx:id="dateOfDeathDatePicker" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="31.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXDatePicker>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Mesto rođ.">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="birthPlaceTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="25.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Pol">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXRadioButton fx:id="maleRB" selected="true" text="Muški">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="65.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="rbtnSex" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="femaleRB" text="Ženski" toggleGroup="$rbtnSex">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXRadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Br. kartona *">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="recordNumberTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="19.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets right="30.0" />
+                                 </FlowPane.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="318.0" prefWidth="280.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Adresa">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="addressTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="64.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Grad">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="cityTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="75.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Država">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="countryTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="65.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Državljanin">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="citizenshipTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="40.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Telefon">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="phoneTextField" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="61.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Mob. tel.">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="mPhoneTextField" prefHeight="25.0" prefWidth="163.0" promptText="xxx xxxxxx(x)">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="54.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Email">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="emailTextField" prefHeight="25.0" prefWidth="163.0" promptText="username@domain">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="70.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+            <Tab text="Socijalni podaci">
+              <content>
+                  <StackPane>
+                     <children>
+                        <FlowPane alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="318.0" prefWidth="308.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Bračni status">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXComboBox fx:id="maritalStatusCBox" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets left="55.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Br. dece">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="numOfChildrenTextField" prefHeight="25.0" prefWidth="177.0">
+                                             <HBox.margin>
+                                                <Insets left="73.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Struč. sprema">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXComboBox fx:id="vocationCBox" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets left="50.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Zanimanje">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="occupationTextField" prefHeight="25.0" prefWidth="177.0">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="61.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Materijalni stat.">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXComboBox fx:id="materialStatusCBox" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets left="40.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Porodični stat.">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXComboBox fx:id="familyStatusCBox" prefHeight="25.0" prefWidth="163.0">
+                                             <HBox.margin>
+                                                <Insets left="45.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </StackPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="63.0" prefWidth="800.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="editBtn" layoutX="462.0" layoutY="11.0" onAction="#editRecord" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #375D81;" text="Izmeni karton" />
+            <JFXComboBox fx:id="recordListCBox" layoutX="35.0" layoutY="19.0" onAction="#initRecord" prefHeight="28.0" prefWidth="345.0" />
+            <JFXButton fx:id="deleteBtn" layoutX="628.0" layoutY="11.0" onAction="#deleteRecord" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #375D81;" text="Obriši karton" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="168.0" style="-fx-background-color: #375D81;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DrawerController">
+   <children>
+      <Pane prefHeight="143.0" prefWidth="168.0">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="113.0" layoutX="30.0" layoutY="18.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="createBtn" onAction="#startNewRecordPage" prefHeight="58.0" prefWidth="168.0" text="Kreiraj karton">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font></JFXButton>
+      <Pane prefHeight="2.0" style="-fx-background-color: #183152;" />
+      <JFXButton fx:id="editBtn" onAction="#startEditRecordPage" prefHeight="58.0" prefWidth="168.0" text="Izmeni karton">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </JFXButton>
+      <Pane prefHeight="2.0" style="-fx-background-color: #183152;" />
+      <JFXButton fx:id="reserveBtn" onAction="#startReservePage" prefHeight="58.0" prefWidth="168.0" text="Zakaži pregled">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font></JFXButton>
+      <Pane prefHeight="2.0" style="-fx-background-color: #183152;" />
+      <JFXButton fx:id="reservedBtn" onAction="#startReservedPage" prefHeight="58.0" prefWidth="168.0" text="Zakazano">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font></JFXButton>
+   </children>
+</VBox>

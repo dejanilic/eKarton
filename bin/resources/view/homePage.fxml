@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
+   <top>
+      <AnchorPane fx:id="topAnchorPane" prefHeight="79.0" prefWidth="783.0" style="-fx-background-color: #183152;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="553.0" layoutY="2.0" spacing="7.0" AnchorPane.rightAnchor="24.0">
+               <children>
+                  <JFXButton fx:id="statisticsBtn" onAction="#showStatistics" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #375D81;">
+                     <tooltip>
+                        <Tooltip text="Statistika" />
+                     </tooltip></JFXButton>
+                  <JFXButton fx:id="changePaswordBtn" onAction="#changePassword" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #375D81;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Promeni lozinku" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="quitBtn" onAction="#exit" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #375D81;">
+                     <tooltip>
+                        <Tooltip text="Izađi iz programa" />
+                     </tooltip></JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </padding>
+            </HBox>
+            <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="30.0" />
+            <Label fx:id="doctorNameLbl" layoutX="60.0" layoutY="28.0" text="Ime doktora, ordinacija" textFill="#375d81">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="412.0" prefWidth="168.0" style="-fx-background-color: #375D81;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" prefHeight="412.0" prefWidth="168.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Pane fx:id="searchPane" maxHeight="166.0" maxWidth="259.0" prefHeight="166.0" prefWidth="259.0" style="-fx-background-color: #d3d3d3; -fx-border-color: #c1c1c1; -fx-border-width: 2;">
+                     <children>
+                        <JFXButton fx:id="mainSearchBtn" layoutX="39.0" layoutY="94.0" onAction="#searchFiles" prefHeight="26.0" prefWidth="178.0" text="Pretraži kartoteku" textFill="#4a4a4a">
+                           <font>
+                              <Font name="Verdana" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="searchInputTextField" alignment="CENTER" focusColor="#375d81" layoutX="31.0" layoutY="58.0" maxWidth="197.0" prefHeight="25.0" prefWidth="197.0" promptText="Unesite kriterijum za pretragu">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
