@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="mainPane" fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginPageController">
+   <children>
+      <AnchorPane id="formPane" layoutX="455.0" layoutY="50.0" prefHeight="360.0" prefWidth="300.0" style="-fx-background-color: #375D81;">
+         <children>
+            <VBox alignment="CENTER" layoutX="1.0" prefHeight="360.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="31.0" prefWidth="103.0" text="Ulogujte se" textFill="#d7cccc">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="31.0" prefWidth="191.0">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/username.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <JFXTextField fx:id="usernameTxtFld" focusColor="#32cc4e" maxWidth="225.0" minWidth="199.0" onMousePressed="#resetUsernameLbl" prefHeight="31.0" prefWidth="225.0" promptText="korisničko ime">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="usernameLbl" prefWidth="200.0" textFill="#cc0000">
+                     <font>
+                        <Font name="Verdana" size="11.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/password.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="passwordTxtFld" focusColor="#32cc4e" maxWidth="225.0" minWidth="225.0" onMousePressed="#resetPasswordLbl" prefHeight="31.0" prefWidth="225.0" promptText="lozinka">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="passwordLbl" prefWidth="200.0" textFill="#cc0000">
+                     <font>
+                        <Font name="Verdana" size="11.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="loginBtn" buttonType="RAISED" onAction="#login" prefHeight="25.0" prefWidth="225.0" ripplerFill="WHITE" style="-fx-background-color: #E45652;" text="Uloguj se" textFill="#d7cccc">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="12.5" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Label fx:id="messageLbl" alignment="CENTER" prefHeight="17.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Verdana" size="11.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" prefHeight="459.0" prefWidth="400.0" style="-fx-background-color: #183152;">
+         <children>
+            <VBox alignment="CENTER" layoutY="-3.0" prefHeight="459.0" prefWidth="400.0">
+               <children>
+                  <ImageView fitHeight="107.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Dobro došli u eKarton" textFill="#d7cccc">
+                     <font>
+                        <Font name="Verdana" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label text="Pouzdano i sigurno rešenje za vođenje" textFill="#d7cccc">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text=" elektronskih kartona pacijenata i medicinskih" textFill="#d7cccc">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="dokumenata u elektronskoj formi" textFill="#d7cccc">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Label>
+				  <Label text="Test nalog  demo : demo" textFill="#d7cccc">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

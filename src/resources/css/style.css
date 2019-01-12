@@ -1,0 +1,31 @@
+#mainPane {
+	-fx-background-color: linear-gradient(to bottom, #628ed6, transparent);
+}
+
+#topAnchorPane {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 20, 0, 0, 0);
+}
+
+#searchPane {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 30, 0, 0, 0);
+}
+
+/*boja dugmica */
+.tab {
+	-fx-background-color: #183152;
+}
+
+/*boja strelica */
+.tab-header-background {
+	-fx-background-color: #183152;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+/*svojstva kontrolnih labela */
+.tab .tab-label {
+    -fx-font-family: Verdana;
+    -fx-font-size: 14px;
+}
+/*boja tab selection bordera */
+.tab-selected-line {
+    -fx-stroke: #375D81;
+}
